@@ -17,52 +17,81 @@ const poppins = Poppins({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://yegli.dev"),
+
   title: {
-    default: "Yegli — UI/UX Developer",
-    template: "%s | Yegli",
+    default: "Yeglimar Montanez — Full Stack Developer & UI/UX Designer",
+    template: "%s | Yeglimar Montanez",
   },
+
   description:
-    "Portafolio de Yegli, desarrolladora UI/UX especializada en interfaces modernas, accesibles y con enfoque en performance.",
-  keywords: ["UI/UX Developer", "Frontend Developer", "Next.js", "React", "Diseño web", "Portafolio"],
-  authors: [{ name: "Yegli" }],
+    "Portafolio de Yeglimar Montanez, desarrolladora Full Stack e Ingeniería en Computación egresada de la URU. Especializada en React, React Native, C#, Node.js, y diseño UI/UX. Disponible para proyectos freelance y oportunidades.",
+
+  keywords: [
+    "Yeglimar Montanez",
+    "Yegli",
+    "Full Stack Developer",
+    "UI/UX Designer",
+    "React Developer",
+    "React Native",
+    "Next.js",
+    "TypeScript",
+    "C#",
+    "Node.js",
+    "Ingeniería en Computación",
+    "Universidad Rafael Urdaneta",
+    "Portafolio desarrolladora",
+    "Frontend Developer Venezuela",
+    "Desarrolladora web",
+    "Aplicaciones móviles",
+  ],
+
+  authors: [{ name: "Yeglimar Montanez", url: "https://yegli.dev" }],
+  creator: "Yeglimar Montanez",
+
   openGraph: {
     type: "website",
     locale: "es_ES",
     url: "https://yegli.dev",
-    siteName: "Yegli Portfolio",
-    title: "Yegli — UI/UX Developer",
+    siteName: "Yeglimar Montanez — Portfolio",
+    title: "Yeglimar Montanez — Full Stack Developer & UI/UX Designer",
     description:
-      "Portafolio de Yegli, desarrolladora UI/UX especializada en interfaces modernas, accesibles y con enfoque en performance.",
+      "Full Stack Developer especializada en React, React Native, C# y Node.js. Proyectos reales para COLBÚN, URU y CIATÉ. Disponible para nuevas oportunidades.",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Yegli — UI/UX Developer Portfolio",
+        alt: "Yeglimar Montanez — Full Stack Developer Portfolio",
       },
     ],
   },
+
   twitter: {
     card: "summary_large_image",
-    title: "Yegli — UI/UX Developer",
+    title: "Yeglimar Montanez — Full Stack Developer & UI/UX Designer",
     description:
-      "Portafolio de Yegli, desarrolladora UI/UX especializada en interfaces modernas, accesibles y con enfoque en performance.",
+      "Full Stack Developer especializada en React, React Native, C# y Node.js. Portafolio con proyectos reales.",
     images: ["/og-image.png"],
   },
+
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+
+  alternates: {
+    canonical: "https://yegli.dev",
   },
 };
 
 /* Anti-FOUC: only honor an explicit user choice saved in localStorage; default = light */
-const themeScript = `
-(function(){
-  try{
-    if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');
-  }catch(e){}
-})();
-`;
+const themeScript = `(function(){try{if(localStorage.getItem('theme')==='dark')document.documentElement.classList.add('dark');}catch(e){}})();`;
 
 export default function RootLayout({
   children,
@@ -81,14 +110,30 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "ProfilePage",
+              url: "https://yegli.dev",
               mainEntity: {
                 "@type": "Person",
-                name: "Yegli",
-                jobTitle: "UI/UX Developer",
+                name: "Yeglimar Montanez",
+                alternateName: "Yegli",
+                jobTitle: "Full Stack Developer & UI/UX Designer",
+                description:
+                  "Desarrolladora Full Stack e Ingeniera en Computación egresada de la Universidad Rafael Urdaneta. Especializada en React, React Native, C#, Node.js y diseño UI/UX.",
                 url: "https://yegli.dev",
+                email: "montanezyeglimar4@gmail.com",
+                knowsAbout: [
+                  "React", "React Native", "TypeScript", "Next.js",
+                  "C#", "Node.js", "PostgreSQL", "SQL Server",
+                  "UI/UX Design", "Figma",
+                ],
+                alumniOf: {
+                  "@type": "CollegeOrUniversity",
+                  name: "Universidad Rafael Urdaneta",
+                  alternateName: "URU",
+                },
                 sameAs: [
-                  "https://github.com/yegli",
-                  "https://linkedin.com/in/yegli",
+                  "https://github.com/yegli11",
+                  "https://www.linkedin.com/in/yeglimar-montanez-b00489216/",
+                  "https://www.instagram.com/yegli11/",
                 ],
               },
             }),
