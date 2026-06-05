@@ -19,6 +19,7 @@ const t = {
         "Desarrollo aplicaciones de principio a fin: del diseño de la interfaz a la integración con el backend, convirtiendo ideas en productos que funcionan.",
       cta1: "Ver proyectos ✦",
       cta2: "Contactar",
+      cta3: "Descargar CV",
       degree: "Ingeniería en Computación · Universidad Rafael Urdaneta",
     },
     about: {
@@ -109,6 +110,7 @@ const t = {
         "I build applications from start to finish: from interface design to backend integration, turning ideas into products that work.",
       cta1: "View projects ✦",
       cta2: "Contact me",
+      cta3: "Download CV",
       degree: "Computer Engineering · Universidad Rafael Urdaneta",
     },
     about: {

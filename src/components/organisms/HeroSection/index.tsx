@@ -61,6 +61,10 @@ export function HeroSection() {
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8, duration: 0.45 }} className="flex flex-wrap gap-4 relative z-10">
           <motion.a href="#proyectos" whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.97 }} className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-extrabold shadow-xl" style={{ background: "#fff", color: "#EB4213" }}>{h.cta1}</motion.a>
           <motion.a href="#contacto" whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.97 }} className="inline-flex items-center gap-2 rounded-full border-2 border-white/60 px-8 py-4 text-base font-extrabold text-white" style={{ background: "rgba(255,255,255,0.12)" }}>{h.cta2}</motion.a>
+          <motion.a href="/cv/YEGLIMAR%20MONTANEZ%2C%20CV%20ES.pdf" download="Yeglimar-Montanez-CV.pdf" whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.97 }} className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-extrabold shadow-xl" style={{ background: "#D8F382", color: "#1A2E0A" }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+            {h.cta3}
+          </motion.a>
         </motion.div>
         <motion.p initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.9, duration: 0.45 }} className="relative z-10 text-sm font-bold text-white/70 max-w-xs">{h.degree}</motion.p>
       </motion.div>
