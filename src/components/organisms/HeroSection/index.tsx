@@ -24,7 +24,7 @@ export function HeroSection() {
 
   return (
     <section id="inicio" aria-label="Presentacion" className="grid min-h-screen grid-cols-1 lg:grid-cols-[5fr_7fr] lg:grid-rows-[1fr_auto]">
-      <motion.div {...blockAnim(0)} className="relative flex flex-col justify-between overflow-hidden p-10 lg:p-14 lg:row-span-2" style={{ background: "#826DEE", minHeight: "55vh" }}>
+      <motion.div {...blockAnim(0)} className="relative flex flex-col justify-between overflow-hidden p-7 sm:p-10 lg:p-14 pt-24 sm:pt-28 lg:pt-24 lg:row-span-2" style={{ background: "#826DEE", minHeight: "55vh" }}>
         <span className="pointer-events-none absolute -right-6 bottom-10 select-none font-display text-[14rem] font-black leading-none opacity-[0.08] text-white" aria-hidden="true">+</span>
         <div className="flex flex-col gap-8 relative z-10">
           <motion.span initial={{ opacity: 0, y: -12 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3, duration: 0.4 }} className="inline-flex w-fit items-center gap-2 rounded-full px-4 py-2 text-xs font-extrabold uppercase tracking-widest text-white" style={{ background: "#EB4213" }}>
@@ -32,7 +32,7 @@ export function HeroSection() {
           </motion.span>
           <div>
             <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4, duration: 0.4 }} className="text-lg font-semibold text-white/70">{h.greeting}</motion.p>
-            <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.55 }} className="font-display font-extrabold leading-none tracking-tight text-white" style={{ fontSize: "clamp(3.5rem, 8vw, 7rem)" }}>Yeglimar</motion.h1>
+            <motion.h1 initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.45, duration: 0.55 }} className="font-display font-extrabold leading-none tracking-tight text-white break-words" style={{ fontSize: "clamp(2.75rem, 9vw, 7rem)" }}>Yeglimar</motion.h1>
             <motion.div initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ delay: 0.75, duration: 0.5 }} className="mt-3 h-2 w-28 origin-left rounded-full" style={{ background: "#FF99DC" }} aria-hidden="true" />
           </div>
         </div>
@@ -45,7 +45,7 @@ export function HeroSection() {
         </motion.div>
       </motion.div>
 
-      <motion.div {...blockAnim(0.14)} className="relative flex flex-col justify-center overflow-hidden p-10 lg:p-14" style={{ background: "#FF99DC", color: "#1A0A2E" }}>
+      <motion.div {...blockAnim(0.14)} className="relative flex flex-col justify-center overflow-hidden p-7 sm:p-10 lg:p-14" style={{ background: "#FF99DC", color: "#1A0A2E" }}>
         <span className="pointer-events-none absolute right-8 top-6 select-none font-display text-[10rem] font-black leading-none opacity-[0.07]" style={{ color: "#1A0A2E" }} aria-hidden="true">+</span>
         <div className="relative z-10 flex flex-col gap-6">
           <div className="flex flex-wrap gap-3">
@@ -57,7 +57,7 @@ export function HeroSection() {
         </div>
       </motion.div>
 
-      <motion.div {...blockAnim(0.27)} className="relative flex flex-wrap items-center justify-between gap-6 overflow-hidden p-10 lg:px-14 lg:py-10" style={{ background: "#EB4213" }}>
+      <motion.div {...blockAnim(0.27)} className="relative flex flex-wrap items-center justify-between gap-6 overflow-hidden p-7 sm:p-10 lg:px-14 lg:py-10" style={{ background: "#EB4213" }}>
         <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.8, duration: 0.45 }} className="flex flex-wrap gap-4 relative z-10">
           <motion.a href="#proyectos" whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.97 }} className="inline-flex items-center gap-2 rounded-full px-8 py-4 text-base font-extrabold shadow-xl" style={{ background: "#fff", color: "#EB4213" }}>{h.cta1}</motion.a>
           <motion.a href="#contacto" whileHover={{ scale: 1.06 }} whileTap={{ scale: 0.97 }} className="inline-flex items-center gap-2 rounded-full border-2 border-white/60 px-8 py-4 text-base font-extrabold text-white" style={{ background: "rgba(255,255,255,0.12)" }}>{h.cta2}</motion.a>
