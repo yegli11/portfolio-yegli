@@ -166,8 +166,7 @@ export function HeroSection() {
             className="max-w-md text-lg font-semibold leading-relaxed"
             style={{ color: "#1A0A2E" }}
           >
-            Desarrollo aplicaciones de extremo a extremo: desde el diseño de la
-            interfaz hasta el backend — convirtiendo ideas en productos que funcionan.
+          Desarrollo aplicaciones de principio a fin: del diseño de la interfaz a la integración con el backend, convirtiendo ideas en productos que funcionan.
           </motion.p>
         </div>
       </motion.div>

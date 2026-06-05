@@ -80,12 +80,12 @@ export function AboutSection() {
           transition={{ duration: 0.65, ease: "easeOut", delay: 0.1 }}
           className="flex flex-col gap-6"
         >
-          <SectionTitle eyebrow="Sobre mí" title="Del diseño al backend, todo en uno" align="left" />
+          <SectionTitle eyebrow="Sobre mí" title="Creo, diseño y construyo experiencias web." align="left" />
 
           <div className="flex flex-col gap-4 text-sm leading-relaxed text-text-light/75 dark:text-text-dark/75">
             <p>
-              Soy Yeglimar, desarrolladora Full Stack con más de un año de experiencia
-              construyendo aplicaciones web y móviles de extremo a extremo.
+             Soy Yeglimar Montanez, desarrolladora apasionada por crear experiencias web y móviles que combinen un buen diseño con un código sólido. 
+             Con más de un año de experiencia, trabajo principalmente en el front-end, aunque también me desenvuelvo en el diseño de bases de datos y en proyectos full stack en equipo.
             </p>
             <p>
               He trabajado en{" "}
