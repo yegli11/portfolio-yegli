@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* New bold palette */
+  --color-primary:       #826DEE;
+  --color-primary-dark:  #6B4DC8;
+  --color-accent:        #FF99DC;
+  --color-accent-dark:   #E0007A;
+  --color-secondary:     #EB4213;
+  --color-secondary-dark:#C43500;
+  --color-lime:          #D8F382;
+  --color-sky:           #4DB8FF;
+  --color-yellow:        #FFE566;
+
+  /* Surfaces */
+  --color-bg-light:      #FAFAFA;
+  --color-surface-light: #FFFFFF;
+  --color-bg-dark:       #0F0F1A;
+  --color-surface-dark:  #1A1A2E;
+
+  /* Text */
+  --color-text-light: #1A1A2E;
+  --color-text-dark:  #F1F1F5;
+
+  /* Fonts */
+  --font-sans:    var(--font-inter);
+  --font-display: var(--font-poppins);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-inter, sans-serif);
+  background-color: #FAFAFA;
+  color: #1A1A2E;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+html.dark body { background-color: #0F0F1A; color: #F1F1F5; }
+
+::selection { background-color: #826DEE; color: #fff; }
