@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { SectionTemplate } from "@/src/components/templates/SectionTemplate";
 import { SectionTitle } from "@/src/components/atoms/SectionTitle";
 import { ProjectCard } from "@/src/components/molecules/ProjectCard";
+import { useLanguage } from "@/src/context/LanguageContext";
 import type { Project } from "@/src/types";
 
 const projects: Project[] = [
@@ -116,18 +117,16 @@ function GroupLabel({ label, bg, text }: { label: string; bg: string; text: stri
 }
 
 export function ProjectsSection() {
+  const { tr } = useLanguage();
+  const p = tr.projects;
+
   return (
     <SectionTemplate id="proyectos" variant="light">
       <div className="flex flex-col gap-16">
-        <SectionTitle
-          eyebrow="Proyectos"
-          title="Trabajo destacado"
-          subtitle="Aplicaciones reales desarrolladas de extremo a extremo — diseño, frontend y backend."
-        />
+        <SectionTitle eyebrow={p.eyebrow} title={p.title} subtitle={p.subtitle} />
 
-        {/* ── Proyectos laborales ───────────────────────── */}
         <div className="flex flex-col gap-6">
-          <GroupLabel label="💼 Proyectos laborales" bg="#EB4213" text="#fff" />
+          <GroupLabel label={p.laborales} bg="#EB4213" text="#fff" />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {laborales.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i} />
@@ -135,16 +134,14 @@ export function ProjectsSection() {
           </div>
         </div>
 
-        {/* Divider */}
         <div className="flex gap-1 h-1.5" aria-hidden="true">
           {["#826DEE","#FF99DC","#EB4213","#D8F382","#4DB8FF"].map((c) => (
             <div key={c} className="flex-1 rounded-full" style={{ background: c }} />
           ))}
         </div>
 
-        {/* ── Proyectos personales ──────────────────────── */}
         <div className="flex flex-col gap-6">
-          <GroupLabel label="✦ Proyectos personales" bg="#826DEE" text="#fff" />
+          <GroupLabel label={p.personales} bg="#826DEE" text="#fff" />
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {personales.map((project, i) => (
               <ProjectCard key={project.id} project={project} index={i + laborales.length} />

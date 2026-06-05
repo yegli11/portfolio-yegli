@@ -4,21 +4,38 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ThemeToggle } from "@/src/components/atoms/ThemeToggle";
+import { LanguageToggle } from "@/src/components/atoms/LanguageToggle";
 import { NavItem } from "@/src/components/molecules/NavItem";
-import type { HeaderProps } from "./types";
+import { useLanguage } from "@/src/context/LanguageContext";
 
-export function Header({ links }: HeaderProps) {
+const NAV_HREFS = [
+  "#inicio",
+  "#sobre-mi",
+  "#proyectos",
+  "#habilidades",
+  "#formacion",
+  "#contacto",
+] as const;
+
+export function Header() {
+  const { tr } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("");
 
+  const navLinks = [
+    { href: "#inicio",      label: tr.nav.inicio },
+    { href: "#sobre-mi",    label: tr.nav.sobreMi },
+    { href: "#proyectos",   label: tr.nav.proyectos },
+    { href: "#habilidades", label: tr.nav.habilidades },
+    { href: "#formacion",   label: tr.nav.formacion },
+    { href: "#contacto",    label: tr.nav.contacto },
+  ];
+
   useEffect(() => {
     function onScroll() {
       setScrolled(window.scrollY > 24);
-
-      /* Highlight the current section */
-      const sections = links.map((l) => l.href.replace("#", ""));
-      const current = sections.find((id) => {
+      const current = NAV_HREFS.map((h) => h.replace("#", "")).find((id) => {
         const el = document.getElementById(id);
         if (!el) return false;
         const { top, bottom } = el.getBoundingClientRect();
@@ -26,12 +43,10 @@ export function Header({ links }: HeaderProps) {
       });
       setActiveSection(current ? `#${current}` : "");
     }
-
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, [links]);
+  }, []);
 
-  /* Close menu on route change / resize */
   useEffect(() => {
     function onResize() {
       if (window.innerWidth >= 768) setMenuOpen(false);
@@ -67,7 +82,7 @@ export function Header({ links }: HeaderProps) {
         {/* Desktop nav */}
         <nav aria-label="Navegación principal" className="hidden md:block">
           <ul className="flex items-center gap-8">
-            {links.map((link) => (
+            {navLinks.map((link) => (
               <NavItem
                 key={link.href}
                 href={link.href}
@@ -80,6 +95,7 @@ export function Header({ links }: HeaderProps) {
 
         {/* Right side */}
         <div className="flex items-center gap-2">
+          <LanguageToggle />
           <ThemeToggle />
 
           {/* Mobile hamburger */}
@@ -89,24 +105,9 @@ export function Header({ links }: HeaderProps) {
             aria-expanded={menuOpen}
             aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
           >
-            <span
-              className={[
-                "absolute block h-0.5 w-5 bg-current transition-all duration-300",
-                menuOpen ? "rotate-45" : "-translate-y-1.5",
-              ].join(" ")}
-            />
-            <span
-              className={[
-                "absolute block h-0.5 w-5 bg-current transition-all duration-300",
-                menuOpen ? "opacity-0" : "opacity-100",
-              ].join(" ")}
-            />
-            <span
-              className={[
-                "absolute block h-0.5 w-5 bg-current transition-all duration-300",
-                menuOpen ? "-rotate-45" : "translate-y-1.5",
-              ].join(" ")}
-            />
+            <span className={["absolute block h-0.5 w-5 bg-current transition-all duration-300", menuOpen ? "rotate-45" : "-translate-y-1.5"].join(" ")} />
+            <span className={["absolute block h-0.5 w-5 bg-current transition-all duration-300", menuOpen ? "opacity-0" : "opacity-100"].join(" ")} />
+            <span className={["absolute block h-0.5 w-5 bg-current transition-all duration-300", menuOpen ? "-rotate-45" : "translate-y-1.5"].join(" ")} />
           </button>
         </div>
       </div>
@@ -123,7 +124,7 @@ export function Header({ links }: HeaderProps) {
             className="overflow-hidden border-t border-black/8 dark:border-white/8 bg-bg-light dark:bg-bg-dark md:hidden"
           >
             <ul className="flex flex-col gap-1 px-4 py-4">
-              {links.map((link) => (
+              {navLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}

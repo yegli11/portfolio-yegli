@@ -6,21 +6,11 @@ import { SkillsSection } from "@/src/components/organisms/SkillsSection";
 import { EducationSection } from "@/src/components/organisms/EducationSection";
 import { ContactSection } from "@/src/components/organisms/ContactSection";
 import { Footer } from "@/src/components/organisms/Footer";
-import type { NavLink } from "@/src/types";
-
-const navLinks: NavLink[] = [
-  { label: "Inicio",      href: "#inicio" },
-  { label: "Sobre mí",   href: "#sobre-mi" },
-  { label: "Proyectos",  href: "#proyectos" },
-  { label: "Habilidades", href: "#habilidades" },
-  { label: "Formación",  href: "#formacion" },
-  { label: "Contacto",   href: "#contacto" },
-];
 
 export default function Home() {
   return (
     <>
-      <Header links={navLinks} />
+      <Header />
       <main id="main-content">
         <HeroSection />
         <AboutSection />
