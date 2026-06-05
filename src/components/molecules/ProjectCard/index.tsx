@@ -15,9 +15,11 @@ const palette = [
 ];
 
 export function ProjectCard({ project, index = 0 }: ProjectCardProps) {
-  const { tr } = useLanguage();
+  const { tr, locale } = useLanguage();
   const p = tr.projects;
-  const { title, description, image, stack, role, isPrivate, liveUrl, repoUrl, caseStudyUrl } = project;
+  const { titleEn, descriptionEn, image, stack, role, isPrivate, liveUrl, repoUrl, caseStudyUrl } = project;
+  const title = (locale === "en" && titleEn) ? titleEn : project.title;
+  const description = (locale === "en" && descriptionEn) ? descriptionEn : project.description;
   const { bg, onBg, accent } = palette[index % palette.length];
   const num = String(index + 1).padStart(2, "0");
 

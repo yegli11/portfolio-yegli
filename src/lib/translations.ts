@@ -16,14 +16,14 @@ const t = {
       role1: "Full Stack Developer",
       role2: "UI/UX Designer",
       description:
-        "Desarrollo aplicaciones de extremo a extremo: desde el diseño de la interfaz hasta el backend — convirtiendo ideas en productos que funcionan.",
+        "Desarrollo aplicaciones de principio a fin: del diseño de la interfaz a la integración con el backend, convirtiendo ideas en productos que funcionan.",
       cta1: "Ver proyectos ✦",
       cta2: "Contactar",
       degree: "Ingeniería en Computación · Universidad Rafael Urdaneta",
     },
     about: {
       eyebrow: "Sobre mí",
-      title: "Del diseño al backend, todo en uno",
+      title: "Creo, diseño y construyo experiencias web y móviles.",
       bio1: "Soy Yeglimar, desarrolladora Full Stack con más de un año de experiencia construyendo aplicaciones web y móviles de extremo a extremo.",
       bio2: (img: string, uru: string, ciate: string) =>
         `He trabajado en IMAGEN (gestión industrial), la ${uru} (sistemas académicos) y ${ciate} (plataforma de atención terapéutica).`,
@@ -49,9 +49,11 @@ const t = {
       techEyebrow: "Habilidades técnicas",
       techTitle: "Tecnologías que manejo",
       techSubtitle: "Stack completo — desde interfaces hasta bases de datos.",
+      techCategories: ["Frontend", "Mobile", "Backend", "Bases de datos", "Diseño & Herramientas"],
       softEyebrow: "Habilidades blandas",
       softTitle: "Cómo trabajo",
       softSubtitle: "Las cualidades que me hacen un plus en cualquier equipo.",
+      softLabels: ["Comunicativa", "Trabajo en equipo", "Bajo presión", "Adaptabilidad", "Resolución de problemas"],
       softDescs: [
         "Me expreso con claridad con el equipo y los clientes",
         "Colaboro activamente para alcanzar objetivos comunes",
@@ -70,6 +72,7 @@ const t = {
       statusBadge: "Pendiente de grado",
       description:
         "Formación en desarrollo de software, bases de datos, redes, estructuras de datos y sistemas operativos. Proyectos prácticos aplicados a soluciones reales para empresas e instituciones durante toda la carrera.",
+      highlights: ["Desarrollo de Software", "Bases de Datos", "Redes", "Algoritmos", "Sistemas Operativos"],
     },
     contact: {
       eyebrow: "Contacto",
@@ -103,14 +106,14 @@ const t = {
       role1: "Full Stack Developer",
       role2: "UI/UX Designer",
       description:
-        "I build end-to-end applications — from interface design to backend — turning ideas into products that work.",
+        "I build applications from start to finish: from interface design to backend integration, turning ideas into products that work.",
       cta1: "View projects ✦",
       cta2: "Contact me",
       degree: "Computer Engineering · Universidad Rafael Urdaneta",
     },
     about: {
       eyebrow: "About me",
-      title: "From design to backend, all in one",
+      title: "I create, design and build web and mobile experiences.",
       bio1: "I'm Yeglimar, a Full Stack Developer with over a year of experience building web and mobile applications end to end.",
       bio2: (img: string, uru: string, ciate: string) =>
         `I've worked at IMAGEN (industrial management), ${uru} (academic systems) and ${ciate} (therapeutic care platform).`,
@@ -136,9 +139,11 @@ const t = {
       techEyebrow: "Technical skills",
       techTitle: "Technologies I use",
       techSubtitle: "Full stack — from interfaces to databases.",
+      techCategories: ["Frontend", "Mobile", "Backend", "Databases", "Design & Tools"],
       softEyebrow: "Soft skills",
       softTitle: "How I work",
       softSubtitle: "The qualities that make me a great addition to any team.",
+      softLabels: ["Communicative", "Teamwork", "Under pressure", "Adaptability", "Problem solving"],
       softDescs: [
         "I communicate clearly with both the team and clients",
         "I actively collaborate to achieve shared goals",
@@ -157,6 +162,7 @@ const t = {
       statusBadge: "Degree ceremony pending",
       description:
         "Studies in software development, databases, networking, data structures and operating systems. Practical projects applied to real-world solutions for companies and institutions throughout the degree.",
+      highlights: ["Software Development", "Databases", "Networking", "Algorithms", "Operating Systems"],
     },
     contact: {
       eyebrow: "Contact",

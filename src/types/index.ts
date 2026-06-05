@@ -9,6 +9,8 @@ export interface Project {
   type: ProjectType;
   role?: string;
   isPrivate?: boolean;
+  titleEn?: string;
+  descriptionEn?: string;
   liveUrl?: string;
   repoUrl?: string;
   caseStudyUrl?: string;

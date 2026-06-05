@@ -19,7 +19,7 @@ export function LanguageToggle() {
         color: "#fff",
       }}
     >
-      {isEN ? "🇬🇧 EN" : "🇪🇸 ES"}
+      {isEN ? "EN" : "ES"}
     </motion.button>
   );
 }
