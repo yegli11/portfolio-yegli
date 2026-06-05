@@ -42,13 +42,13 @@ export function AboutSection() {
           </div>
 
           <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.4, duration: 0.4 }}
-            className="absolute -bottom-5 -right-5 rounded-2xl px-5 py-3 text-white shadow-xl" style={{ background: "#EB4213" }}>
+            className="absolute -bottom-4 right-2 sm:-bottom-5 sm:-right-5 rounded-2xl px-5 py-3 text-white shadow-xl" style={{ background: "#EB4213" }}>
             <p className="text-xs font-semibold uppercase tracking-wide opacity-80">{a.roleLabel}</p>
             <p className="text-sm font-extrabold">Full Stack + UI/UX</p>
           </motion.div>
 
           <motion.div initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} transition={{ delay: 0.5, duration: 0.4 }}
-            className="absolute -top-5 -left-5 rounded-2xl px-4 py-3 shadow-lg" style={{ background: "#D8F382", color: "#1A2E0A" }}>
+            className="absolute -top-4 left-2 sm:-top-5 sm:-left-5 rounded-2xl px-4 py-3 shadow-lg" style={{ background: "#D8F382", color: "#1A2E0A" }}>
             <p className="text-xs font-extrabold">{a.openToWork}</p>
           </motion.div>
         </motion.div>
