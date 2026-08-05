@@ -50,7 +50,8 @@ const projects: Project[] = [
   {
     id: "p2",
     type: "personal",
-    repoUrl: "https://github.com/yegli/ciate-platform",
+    // repoUrl: "https://github.com/yegli/ciate-platform",
+    liveUrl: "https://gentle-mushroom-04015650f.7.azurestaticapps.net/sign-in",
     title: "Plataforma CIATÉ — Web y Móvil",
     titleEn: "CIATÉ Platform — Web & Mobile",
     description:
@@ -63,6 +64,7 @@ const projects: Project[] = [
     id: "p3",
     type: "personal",
     repoUrl: "https://github.com/yegli11/church-web-page",
+    liveUrl: "",
     title: "Iglesia Antorcha de Cristo",
     titleEn: "Antorcha de Cristo Evangelical Church",
     description:
@@ -74,7 +76,8 @@ const projects: Project[] = [
   {
     id: "p4",
     type: "personal",
-    repoUrl: "https://github.com/Nochi-Labs/OptiAhorro",
+    // repoUrl: "https://www.optiahorro.cl/",
+    liveUrl: "https://www.optiahorro.cl/",
     title: "OptiAhorro — PWA",
     titleEn: "OptiAhorro — PWA",
     description:
